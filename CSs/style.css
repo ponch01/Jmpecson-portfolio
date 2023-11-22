@@ -6,17 +6,120 @@ body {
     margin: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+}
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+#xmas {
     background-color: rgb(99, 98, 98);
     position: fixed;
     width: 100%;
-    border-bottom: solid rgba(255, 255, 255, 0.404) 1px;
-    z-index: 1;
-    color: white;
-    padding: 0.6rem;
+    max-width: 190rem;
+    border-bottom: solid 1px white;
+    padding: 1rem 2rem;
+    z-index: 2;
+}
+
+/* .navbar {
+   
+} */
+
+.hamburger {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
 }
 
 .icon{
@@ -50,30 +153,15 @@ a {
 
 /* Home Section */
 
-#home {
-    height: 150%;
-    padding: 0 10rem;
-    background-color: rgb(99, 98, 98);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.main-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    padding: 0 1rem;
-}
+
+
 
 .img-cont {
     background-color: #FDC8DA;
-    height: 100vh;
-    max-height: 900px;
-    width: 50vh;
+    height: 80vh;
+    max-height: 800px;
+    
     display: flex;
     flex-direction: column;
     padding: 10rem 1rem;
@@ -92,7 +180,7 @@ a {
     width: 150px;
     border: solid 1px black;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: black;
     border-radius: 5px;
     cursor: pointer;
@@ -127,6 +215,11 @@ a {
         justify-content: center; 
         align-items: center;
     }
+    #home {
+        height: 100%;
+        padding: 0 1rem;
+        background-color: rgb(99, 98, 98);
+    }
     .my-projects {
         margin-bottom: 25px;
     }
@@ -150,7 +243,7 @@ a {
     }
     #About {
         height: 100%;
-        padding: 20rem 1rem;
+        padding: 15rem 1rem;
         background-color: rgb(99, 98, 98);
         display: flex;
         align-items: center;
@@ -174,7 +267,26 @@ a {
         row-gap: 4rem;
         border-radius: 10px;
     }
+
+    .main-cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10rem;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        padding: 0 1rem;
+}
    
+}
+
+@media only screen and (max-width: 767px) {
+    .disc {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -183,8 +295,17 @@ a {
         flex-direction: column;
         padding: 1rem;
     }
+
+    #home {
+        height: 100%;
+        padding: 10rem 1rem;
+        background-color: rgb(99, 98, 98);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .disc {
-        padding: 1rem;
+        width: 100%;
     }
 
     .img3 {
