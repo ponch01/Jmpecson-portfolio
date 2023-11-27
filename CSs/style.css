@@ -42,6 +42,7 @@ a {
     border-bottom: solid 1px white;
     padding: 1rem 2rem;
     z-index: 2;
+    color: white;
 }
 
 /* .navbar {
@@ -96,11 +97,10 @@ a {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 5rem;
+        top: 6rem;
         flex-direction: column;
-        background-color: #fff;
+        background-color: gray;
         width: 100%;
-        border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow:
@@ -161,10 +161,10 @@ a {
     background-color: #FDC8DA;
     height: 80vh;
     max-height: 800px;
-    
+    margin-top: 2px;
     display: flex;
     flex-direction: column;
-    padding: 10rem 1rem;
+    padding: 10rem 4rem;
 }
 
 .pfp {
